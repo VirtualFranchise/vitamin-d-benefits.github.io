@@ -1,11 +1,11 @@
-/* Global Reset */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body */
+/* BODY */
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(to bottom, #fff, #f3f3f3);
@@ -14,20 +14,52 @@ body {
   padding: 0 1rem;
 }
 
-/* Hero Banner */
+/* HEADER */
+.main-header {
+  background: #6a1b9a;
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.main-header .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.navigation ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding-top: 0.5rem;
+}
+
+.navigation a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navigation a:hover {
+  text-decoration: underline;
+}
+
+/* HERO SECTION */
 .hero-banner {
   background-color: #fdf5ff;
   padding: 3rem 1rem;
-  display: flex;
-  justify-content: center;
 }
 
 .hero-content {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  max-width: 1200px;
+  justify-content: center;
   gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .hero-text {
@@ -35,7 +67,7 @@ body {
   min-width: 280px;
 }
 
-.hero-text h1 {
+.hero-text h2 {
   font-size: 2.4rem;
   color: #4a148c;
   margin-bottom: 0.5rem;
@@ -43,7 +75,7 @@ body {
 
 .hero-text p {
   color: #555;
-  font-size: 1rem;
+  font-size: 1.1rem;
   margin-bottom: 1.2rem;
 }
 
@@ -58,7 +90,7 @@ body {
   border-radius: 8px;
 }
 
-/* CTA Button */
+/* CTA BUTTON */
 .cta-button {
   background-color: #6a1b9a;
   color: #fff;
@@ -74,83 +106,101 @@ body {
   background-color: #4a148c;
 }
 
-/* About Section */
-.about {
+/* BENEFITS SECTION */
+.benefits {
   background: #fff;
   padding: 2rem;
   margin: 2rem auto;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   max-width: 1000px;
 }
 
-.about h2 {
+.benefits h2 {
   color: #4a148c;
-  margin-bottom: 1rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
-.gallery {
+.gallery.row {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-wrap: nowrap;
+  justify-content: space-between;
   gap: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .gallery img {
   max-width: 300px;
   height: auto;
   border-radius: 6px;
+  width: 100%;
 }
 
-.gallery img.smaller {
-  max-width: 200px;
-}
-
-ul {
-  list-style: disc;
-  padding-left: 1.5rem;
+ul.highlight-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem auto 1.5rem;
   color: #444;
-  margin: 1rem 0;
+  font-size: 1.1rem;
+  max-width: 600px;
 }
 
+.highlight-list li {
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  text-align: center;
+  font-size: 1.05rem;
+  color: #444;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* COUPLE IMAGE */
 .about figure {
   margin-top: 2rem;
   text-align: center;
 }
 
-.about figure img.mid-bottle {
-  max-width: 220px;
+.about figure img.mid-bottle,
+.smaller-couple {
+  max-width: 480px;
+  width: 100%;
   height: auto;
-  margin-bottom: 0.5rem;
+  border-radius: 10px;
+  margin: 1rem auto;
 }
 
 .about figcaption {
   font-style: italic;
   color: #555;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
 }
 
-/* Testimonials Section */
+/* TESTIMONIALS */
 .testimonials {
   max-width: 1000px;
   margin: 2rem auto;
   padding: 2rem;
   background: #ffffff;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
 .testimonials h2 {
   color: #4a148c;
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .testimonial-cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
   justify-content: center;
+  gap: 1rem;
 }
 
 .testimonial-card {
@@ -161,7 +211,7 @@ ul {
   border-radius: 8px;
   font-style: italic;
   color: #333;
-  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
 }
 
 .testimonial-card span {
@@ -172,15 +222,21 @@ ul {
   color: #4a148c;
 }
 
-/* Email Form */
+/* EMAIL FORM */
 .email-form {
   background: #fff;
   padding: 2rem;
   max-width: 600px;
   margin: 2rem auto;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   text-align: center;
+}
+
+.email-form h2 {
+  color: #4a148c;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
 }
 
 .email-form input[type="email"] {
@@ -205,7 +261,7 @@ ul {
   background-color: #4a148c;
 }
 
-/* Blog Section */
+/* BLOG SECTION */
 .blog {
   max-width: 800px;
   margin: 2rem auto;
@@ -222,7 +278,7 @@ ul {
   color: #444;
 }
 
-/* Footer */
+/* FOOTER */
 footer {
   text-align: center;
   font-size: 0.9rem;
@@ -237,16 +293,36 @@ footer a {
   font-weight: bold;
   text-decoration: none;
 }
-/* Force gallery to stay on one row and align images */
-.gallery.row {
-  flex-wrap: nowrap;
-  justify-content: space-between;
-}
 
-/* Resize the large couple image */
-.smaller-couple {
-  max-width: 480px;
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .gallery.row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .email-form input[type="email"],
+  .email-form button {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  .navigation ul {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .mid-bottle.smaller-couple {
+    max-width: 90%;
+  }
+
+  .testimonial-cards {
+    flex-direction: column;
+    align-items: center;
+  }
 }
