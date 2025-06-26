@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,16 +15,16 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <div class="text-section">
-      <h1>Vitamin D Benefits</h1>
-      <p>Your trusted guide to bone and immune support, powered by Isotonix Vitamin D with K2.</p>
-      <h3>Stronger Bones. Sharper Immunity. Faster Absorption.</h3>
-      <p class="subline">Backed by decades of nutrient delivery research. Trusted by thousands.</p>
-      <a class="cta-button" href="https://www.isotonix.com/buy/product/isotonix-vitamin-d-with-k2/?id=13324&idType=product" target="_blank">Buy Now</a>
-    </div>
-    <div class="image-section">
-      <img src="isotonix-vitamin-d-with-k2.jpg" alt="Isotonix Vitamin D with K2 Bottle" />
+  <header class="hero-banner">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Powerful Support for Bone & Immune Health</h1>
+        <p>Isotonix® Vitamin D with K2 offers maximum absorption and powerful benefits for your wellness journey.</p>
+        <a class="cta-button" href="https://www.isotonix.com/buy/product/isotonix-vitamin-d-with-k2/?id=13324&idType=product" target="_blank">Shop Now</a>
+      </div>
+      <div class="hero-image">
+        <img src="isotonix-vitamin-d-with-k2.jpg" alt="Isotonix Vitamin D with K2 Bottle">
+      </div>
     </div>
   </header>
 
@@ -44,9 +43,7 @@
     <p>Isotonix Vitamin D with K2 offers a unique combination of nutrients that help optimize bone density and immune performance. Delivered in an easy-to-take isotonic form, this supplement is designed to maximize absorption so your body gets the most out of every dose.</p>
     <figure>
       <img src="isotonix-vitamin-d-with-k2.jpg" alt="Isotonix Bottle" />
-      <figcaption>
-        “Mixes instantly – I felt a difference in my energy within days.”
-      </figcaption>
+      <figcaption>“Mixes instantly – I felt a difference in my energy within days.”</figcaption>
     </figure>
   </section>
 
@@ -95,7 +92,7 @@
 
   <script>
     const today = new Date();
-    const start = new Date("2025-01-06"); // First Monday of 2025
+    const start = new Date("2025-01-06");
     const weeksSinceStart = Math.floor((today - start) / (7 * 24 * 60 * 60 * 1000));
     const blogWeek = (weeksSinceStart % 52) + 1;
     const blogPath = `blog/week-${blogWeek}.html`;
