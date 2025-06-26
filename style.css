@@ -237,3 +237,16 @@ footer a {
   font-weight: bold;
   text-decoration: none;
 }
+/* Force gallery to stay on one row and align images */
+.gallery.row {
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+/* Resize the large couple image */
+.smaller-couple {
+  max-width: 480px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
