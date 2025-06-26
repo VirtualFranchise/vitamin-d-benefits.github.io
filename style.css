@@ -8,72 +8,56 @@
 /* Body */
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(to bottom, #fff, #f3f3f3);
+  background: linear-gradient(to bottom, #fff, #f9f9f9);
   color: #333;
   line-height: 1.6;
-  padding: 0 1rem;
+  padding: 0;
 }
 
-/* Hero Banner */
+/* Header */
 .hero-banner {
-  background: linear-gradient(to right, #f3e5f5, #fff);
+  background: #f8f1fc;
   padding: 3rem 1rem;
-  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-content {
   display: flex;
   flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
-  margin: auto;
   gap: 2rem;
 }
 
 .hero-text {
-  flex: 1 1 50%;
+  flex: 1;
+  min-width: 280px;
 }
 
 .hero-text h1 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   color: #4a148c;
   margin-bottom: 1rem;
 }
 
 .hero-text p {
-  font-size: 1.2rem;
+  margin-bottom: 1rem;
   color: #555;
-  margin-bottom: 1.5rem;
 }
 
 .hero-image {
-  flex: 1 1 40%;
+  flex: 1;
   text-align: center;
+  min-width: 200px;
 }
 
 .hero-image img {
-  max-width: 300px;
-  width: 100%;
-  height: auto;
+  max-width: 280px;
   border-radius: 8px;
-}
-
-/* Typography */
-h2 {
-  color: #4a148c;
-  margin-bottom: 1rem;
-}
-
-h3 {
-  color: #6a1b9a;
-  margin-top: 1rem;
-}
-
-.subline {
-  color: #555;
-  font-size: 0.95rem;
-  margin-bottom: 1.5rem;
 }
 
 /* CTA Button */
@@ -86,7 +70,6 @@ h3 {
   border-radius: 5px;
   transition: background 0.3s ease;
   display: inline-block;
-  margin-top: 1rem;
 }
 
 .cta-button:hover {
@@ -95,24 +78,31 @@ h3 {
 
 /* About Section */
 .about {
-  background: rgba(255, 255, 255, 0.95);
-  padding: 2rem;
+  background: #ffffff;
+  padding: 3rem 1rem;
   margin: 2rem auto;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
   max-width: 1000px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.04);
+}
+
+.about h2 {
+  text-align: center;
+  color: #4a148c;
+  margin-bottom: 1.5rem;
 }
 
 .gallery {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
-  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
 }
 
 .gallery img {
-  max-width: 300px;
+  width: 100%;
+  max-width: 280px;
   height: auto;
   border-radius: 6px;
 }
@@ -121,35 +111,59 @@ ul {
   list-style: disc;
   padding-left: 1.5rem;
   color: #444;
-  margin: 1rem 0;
+  margin: 1.5rem 0;
+}
+
+.about p {
+  margin-bottom: 1.5rem;
+}
+
+figure {
+  text-align: center;
+}
+
+figure img.mid-bottle {
+  max-width: 260px;
+  margin: 1rem auto;
+}
+
+figcaption {
+  font-size: 0.9rem;
+  color: #555;
 }
 
 /* Testimonials */
 .testimonials {
+  background: #fdfcff;
+  padding: 3rem 1rem;
   max-width: 1000px;
   margin: 2rem auto;
-  padding: 2rem;
-  background: #ffffff;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.03);
+}
+
+.testimonials h2 {
+  text-align: center;
+  color: #4a148c;
+  margin-bottom: 2rem;
 }
 
 .testimonial-cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
   justify-content: center;
+  gap: 1rem;
 }
 
 .testimonial-card {
   background-color: #f8f8ff;
   border-left: 5px solid #6a1b9a;
   padding: 1rem;
-  max-width: 280px;
+  max-width: 260px;
   border-radius: 8px;
   font-style: italic;
   color: #333;
-  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
 }
 
 .testimonial-card span {
@@ -160,22 +174,27 @@ ul {
   color: #4a148c;
 }
 
-/* Email Form */
+/* Email Signup */
 .email-form {
   background: #fff;
   padding: 2rem;
   max-width: 600px;
   margin: 2rem auto;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
   text-align: center;
+}
+
+.email-form h2 {
+  color: #4a148c;
+  margin-bottom: 1rem;
 }
 
 .email-form input[type="email"] {
   padding: 0.5rem;
   width: 70%;
   max-width: 300px;
-  margin-right: 1rem;
+  margin-right: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
@@ -193,26 +212,31 @@ ul {
   background-color: #4a148c;
 }
 
-/* Blog Section */
+/* Blog */
 .blog {
   max-width: 800px;
   margin: 2rem auto;
   text-align: center;
+  padding: 2rem 1rem;
+}
+
+.blog h2 {
+  color: #4a148c;
+  margin-bottom: 1rem;
 }
 
 #blog-preview {
-  margin-top: 1rem;
   font-size: 1rem;
   color: #444;
 }
 
 /* Footer */
 footer {
+  background-color: #f3f3f3;
   text-align: center;
   font-size: 0.9rem;
   padding: 2rem 1rem;
   color: #777;
-  background-color: #f3f3f3;
   margin-top: 2rem;
 }
 
@@ -220,4 +244,25 @@ footer a {
   color: #4a148c;
   font-weight: bold;
   text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image img {
+    max-width: 220px;
+  }
+
+  .email-form input[type="email"] {
+    width: 100%;
+    margin: 0 0 1rem 0;
+  }
+
+  .email-form button {
+    width: 100%;
+  }
 }
