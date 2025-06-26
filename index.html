@@ -1,1 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vitamin D Benefits | Isotonix Vitamin D with K2</title>
+  <meta name="description" content="Discover the benefits of Isotonix Vitamin D with K2. Support your bone and immune health with highly bioavailable nutrients. Learn more and shop now!" />
+  <meta name="keywords" content="vitamin D benefits, vitamin D with K2, Isotonix supplements, bone health, immune support" />
+  <meta name="author" content="Vitamin D Benefits Guide" />
+  <meta property="og:title" content="Vitamin D Benefits | Isotonix Vitamin D with K2" />
+  <meta property="og:description" content="Support bone and immune health with Isotonix Vitamin D with K2. Learn more about its benefits and get yours today." />
+  <meta property="og:url" content="https://vitamin-d-benefits.github.io/" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="16-oz8-servings.jpg" type="image/jpeg">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Vitamin D Benefits</h1>
+    <p>Your trusted guide to bone and immune support, powered by Isotonix Vitamin D with K2.</p>
+    <a class="cta-button" href="https://www.isotonix.com/buy/product/isotonix-vitamin-d-with-k2/?id=13324&idType=product" target="_blank">Buy Now</a>
+  </header>
+
+  <section class="about">
+    <h2>Why Choose Isotonix Vitamin D with K2?</h2>
+    <ul>
+      <li>Supports calcium absorption for bone health</li>
+      <li>Helps maintain immune system function</li>
+      <li>Delivers nutrients in an isotonic form for rapid absorption</li>
+    </ul>
+  </section>
+
+  <section class="email-form">
+    <h2>Get Weekly Wellness Tips</h2>
+    <p>Sign up to receive updates and educational content about vitamin D and health.</p>
+    <form action="https://formspree.io/f/moqgnjvn" method="POST">
+      <input type="email" name="email" placeholder="Your email address" required />
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+
+  <section class="blog">
+    <h2>Weekly Blog Highlights</h2>
+    <div id="blog-preview">
+      <p>Loading weekly blog post...</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Vitamin D Benefits Guide. Not affiliated with Market America. Educational content only.</p>
+  </footer>
+
+  <script>
+    const today = new Date();
+    const start = new Date("2025-01-06"); // First Monday of 2025
+    const weeksSinceStart = Math.floor((today - start) / (7 * 24 * 60 * 60 * 1000));
+    const blogWeek = (weeksSinceStart % 52) + 1;
+    const blogPath = `blog/week-${blogWeek}.html`;
+
+    fetch(blogPath)
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("blog-preview").innerHTML = html;
+      })
+      .catch(() => {
+        document.getElementById("blog-preview").innerHTML = "<p>Check back soon for our latest post!</p>";
+      });
+  </script>
+</body>
+</html>
 
