@@ -1,92 +1,50 @@
-/* GLOBAL RESET */
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* BODY */
+/* Body */
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(to bottom, #fff, #f3f3f3);
   color: #333;
   line-height: 1.6;
-}
-
-/* CONTAINER */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
   padding: 0 1rem;
 }
 
-/* HEADER */
-.main-header {
-  background: #6a1b9a;
-  color: white;
-  padding: 1rem 0;
-  text-align: center;
-}
-
-.main-header .logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-}
-
-.navigation {
-  margin-top: 0.5rem;
-}
-
-.navigation ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  padding: 0;
-}
-
-.navigation a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 1rem;
-}
-
-.navigation a:hover {
-  text-decoration: underline;
-}
-
-/* HERO SECTION */
+/* Hero Banner */
 .hero-banner {
   background-color: #fdf5ff;
   padding: 3rem 1rem;
+  display: flex;
+  justify-content: center;
 }
 
 .hero-content {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  max-width: 1200px;
   gap: 2rem;
-  justify-content: center;
 }
 
 .hero-text {
   flex: 1;
   min-width: 280px;
-  text-align: center;
 }
 
-.hero-text h2 {
-  font-size: 2.2rem;
+.hero-text h1 {
+  font-size: 2.4rem;
   color: #4a148c;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .hero-text p {
   color: #555;
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
 }
 
 .hero-image {
@@ -100,7 +58,7 @@ body {
   border-radius: 8px;
 }
 
-/* CTA BUTTON */
+/* CTA Button */
 .cta-button {
   background-color: #6a1b9a;
   color: #fff;
@@ -116,101 +74,83 @@ body {
   background-color: #4a148c;
 }
 
-/* BENEFITS SECTION */
-.benefits {
+/* About Section */
+.about {
   background: #fff;
-  padding: 3rem 1rem;
+  padding: 2rem;
   margin: 2rem auto;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  max-width: 1000px;
 }
 
-.benefits h2 {
+.about h2 {
   color: #4a148c;
-  text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
-.gallery.row {
+.gallery {
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
-  overflow-x: auto;
+  margin-bottom: 1rem;
 }
 
 .gallery img {
   max-width: 300px;
-  width: 100%;
   height: auto;
   border-radius: 6px;
 }
 
-ul.highlight-list {
-  list-style: none;
-  margin: 2rem auto 1rem;
-  padding: 0;
-  max-width: 600px;
-  font-size: 1.1rem;
+.gallery img.smaller {
+  max-width: 200px;
+}
+
+ul {
+  list-style: disc;
+  padding-left: 1.5rem;
   color: #444;
+  margin: 1rem 0;
 }
 
-.highlight-list li {
-  margin-bottom: 0.75rem;
-}
-
-/* DESCRIPTION */
-.description {
-  font-size: 1.05rem;
-  text-align: center;
-  color: #444;
-  max-width: 800px;
-  margin: auto;
-}
-
-/* COUPLE IMAGE */
 .about figure {
-  text-align: center;
   margin-top: 2rem;
+  text-align: center;
 }
 
-.about figure img.mid-bottle,
-.smaller-couple {
-  max-width: 480px;
-  width: 100%;
+.about figure img.mid-bottle {
+  max-width: 220px;
   height: auto;
-  border-radius: 10px;
-  margin: 1rem auto;
+  margin-bottom: 0.5rem;
 }
 
 .about figcaption {
   font-style: italic;
   color: #555;
-  font-size: 0.95rem;
-  margin-top: 0.5rem;
 }
 
-/* TESTIMONIALS */
+/* Testimonials Section */
 .testimonials {
   max-width: 1000px;
   margin: 2rem auto;
   padding: 2rem;
   background: #ffffff;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
 }
 
 .testimonials h2 {
   color: #4a148c;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .testimonial-cards {
   display: flex;
   flex-wrap: wrap;
+  gap: 1rem;
   justify-content: center;
-  gap: 1.5rem;
 }
 
 .testimonial-card {
@@ -221,7 +161,7 @@ ul.highlight-list {
   border-radius: 8px;
   font-style: italic;
   color: #333;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 5px rgba(0,0,0,0.05);
 }
 
 .testimonial-card span {
@@ -232,21 +172,15 @@ ul.highlight-list {
   color: #4a148c;
 }
 
-/* EMAIL FORM */
+/* Email Form */
 .email-form {
   background: #fff;
   padding: 2rem;
   max-width: 600px;
   margin: 2rem auto;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
   text-align: center;
-}
-
-.email-form h2 {
-  color: #4a148c;
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
 }
 
 .email-form input[type="email"] {
@@ -271,7 +205,7 @@ ul.highlight-list {
   background-color: #4a148c;
 }
 
-/* BLOG SECTION */
+/* Blog Section */
 .blog {
   max-width: 800px;
   margin: 2rem auto;
@@ -288,7 +222,7 @@ ul.highlight-list {
   color: #444;
 }
 
-/* FOOTER */
+/* Footer */
 footer {
   text-align: center;
   font-size: 0.9rem;
@@ -303,37 +237,16 @@ footer a {
   font-weight: bold;
   text-decoration: none;
 }
+/* Force gallery to stay on one row and align images */
+.gallery.row {
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .hero-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .navigation ul {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .gallery.row {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .email-form input[type="email"],
-  .email-form button {
-    width: 100%;
-    margin: 0.5rem 0;
-  }
-
-  .testimonial-cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .about figure img.mid-bottle,
-  .smaller-couple {
-    max-width: 90%;
-  }
+/* Resize the large couple image */
+.smaller-couple {
+  max-width: 480px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
