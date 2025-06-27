@@ -1,23 +1,99 @@
-/* Global Reset */
+/* =======================
+   Global Reset & Base
+======================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body */
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(to bottom, #fff, #f3f3f3);
   color: #333;
   line-height: 1.6;
+}
+
+/* =======================
+   Header & Navigation
+======================= */
+.main-header {
+  background-color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  padding: 1rem 0;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 0 1rem;
 }
 
-/* Hero Banner */
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.logo-icon {
+  width: 36px;
+  height: 36px;
+  background: #6a1b9a;
+  border-radius: 50%;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #4a148c;
+}
+
+.navigation ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.navigation ul li a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #333;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navigation ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #6a1b9a;
+  transition: width 0.3s ease;
+}
+
+.navigation ul li a:hover {
+  color: #6a1b9a;
+}
+
+.navigation ul li a:hover::after {
+  width: 100%;
+}
+
+/* =======================
+   Hero Banner
+======================= */
 .hero-banner {
   background-color: #fdf5ff;
-  padding: 3rem 1rem;
+  padding: 4rem 1rem;
   display: flex;
   justify-content: center;
 }
@@ -35,10 +111,10 @@ body {
   min-width: 280px;
 }
 
-.hero-text h1 {
+.hero-text h2 {
   font-size: 2.4rem;
   color: #4a148c;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
 }
 
 .hero-text p {
@@ -58,7 +134,9 @@ body {
   border-radius: 8px;
 }
 
-/* CTA Button */
+/* =======================
+   CTA Button
+======================= */
 .cta-button {
   background-color: #6a1b9a;
   color: #fff;
@@ -74,27 +152,26 @@ body {
   background-color: #4a148c;
 }
 
-/* About Section */
-.about {
+/* =======================
+   Benefits / About Section
+======================= */
+.benefits {
   background: #fff;
-  padding: 2rem;
-  margin: 2rem auto;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
-  max-width: 1000px;
+  padding: 3rem 1rem;
 }
 
-.about h2 {
+.benefits h2 {
+  text-align: center;
   color: #4a148c;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
-.gallery {
+.gallery.row {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-wrap: nowrap;
+  justify-content: space-between;
   gap: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .gallery img {
@@ -103,38 +180,55 @@ body {
   border-radius: 6px;
 }
 
-.gallery img.smaller {
-  max-width: 200px;
-}
-
-ul {
-  list-style: disc;
-  padding-left: 1.5rem;
-  color: #444;
+ul.highlight-list {
+  list-style: none;
   margin: 1rem 0;
+  color: #444;
 }
 
-.about figure {
-  margin-top: 2rem;
-  text-align: center;
-}
-
-.about figure img.mid-bottle {
-  max-width: 220px;
-  height: auto;
+ul.highlight-list li {
   margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
 }
 
-.about figcaption {
+ul.highlight-list li::before {
+  content: '✅';
+  position: absolute;
+  left: 0;
+}
+
+.description {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 1rem;
+}
+
+figure {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.smaller-couple {
+  max-width: 480px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+figcaption {
   font-style: italic;
   color: #555;
+  margin-top: 0.5rem;
 }
 
-/* Testimonials Section */
+/* =======================
+   Testimonials Section
+======================= */
 .testimonials {
   max-width: 1000px;
   margin: 2rem auto;
-  padding: 2rem;
+  padding: 3rem 1rem;
   background: #ffffff;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
@@ -143,7 +237,7 @@ ul {
 .testimonials h2 {
   color: #4a148c;
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .testimonial-cards {
@@ -172,10 +266,12 @@ ul {
   color: #4a148c;
 }
 
-/* Email Form */
+/* =======================
+   Email Form Section
+======================= */
 .email-form {
   background: #fff;
-  padding: 2rem;
+  padding: 3rem 1rem;
   max-width: 600px;
   margin: 2rem auto;
   border-radius: 10px;
@@ -184,7 +280,7 @@ ul {
 }
 
 .email-form input[type="email"] {
-  padding: 0.5rem;
+  padding: 0.6rem;
   width: 70%;
   max-width: 300px;
   margin-right: 1rem;
@@ -193,19 +289,22 @@ ul {
 }
 
 .email-form button {
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1.2rem;
   background-color: #6a1b9a;
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-weight: 600;
 }
 
 .email-form button:hover {
   background-color: #4a148c;
 }
 
-/* Blog Section */
+/* =======================
+   Blog Section
+======================= */
 .blog {
   max-width: 800px;
   margin: 2rem auto;
@@ -222,7 +321,9 @@ ul {
   color: #444;
 }
 
-/* Footer */
+/* =======================
+   Footer
+======================= */
 footer {
   text-align: center;
   font-size: 0.9rem;
@@ -237,16 +338,33 @@ footer a {
   font-weight: bold;
   text-decoration: none;
 }
-/* Force gallery to stay on one row and align images */
-.gallery.row {
-  flex-wrap: nowrap;
-  justify-content: space-between;
+
+footer a:hover {
+  text-decoration: underline;
 }
 
-/* Resize the large couple image */
-.smaller-couple {
-  max-width: 480px;
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
+/* =======================
+   Responsive Navigation
+======================= */
+@media (max-width: 768px) {
+  .navigation ul {
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    display: none;
+    width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    padding: 1rem;
+  }
+
+  .navigation ul.show {
+    display: flex;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
