@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vitamin D Benefits | Isotonix Vitamin D with K2</title>
+ <title>Vitamin D Benefits | Isotonix Vitamin D with K2</title>
   <meta name="description" content="Discover the benefits of Isotonix Vitamin D with K2. Support your bone and immune health with highly bioavailable nutrients. Learn more and shop now!" />
   <meta name="keywords" content="vitamin D benefits, vitamin D with K2, Isotonix supplements, bone health, immune support" />
   <meta name="author" content="Vitamin D Benefits Guide" />
@@ -19,7 +14,7 @@
     <div class="nav-container">
       <div class="logo-area">
         <div class="logo-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="12" cy="12" r="10" stroke="white" stroke-width="2"/>
             <path d="M12 6v12M6 12h12" stroke="white" stroke-width="2" stroke-linecap="round"/>
           </svg>
@@ -45,11 +40,9 @@
 
   <section class="hero-banner" id="home">
     <div class="hero-content container">
-      <!-- MOVED: Image div now comes first (left side) -->
       <div class="hero-image">
         <img src="isotonix-vitamin-d-with-k2.jpg" alt="Isotonix Vitamin D with K2 Bottle">
       </div>
-      <!-- MOVED: Text div now comes second (right side) -->
       <div class="hero-text">
         <h2>Powerful Support for Bone & Immune Health</h2>
         <p>Isotonix® Vitamin D with K2 offers maximum absorption and powerful benefits for your wellness journey.</p>
@@ -170,6 +163,24 @@
           });
         }
       });
+    });
+
+    // Enhanced scroll effect for header
+    let lastScrollY = window.scrollY;
+    
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('.main-header');
+      const currentScrollY = window.scrollY;
+      
+      if (currentScrollY > 100) {
+        header.style.background = 'linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 244, 255, 0.95) 100%)';
+        header.style.boxShadow = '0 12px 50px rgba(106, 27, 154, 0.12)';
+      } else {
+        header.style.background = 'linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 244, 255, 0.9) 100%)';
+        header.style.boxShadow = '0 8px 40px rgba(106, 27, 154, 0.06)';
+      }
+      
+      lastScrollY = currentScrollY;
     });
 
     // Blog loading script
