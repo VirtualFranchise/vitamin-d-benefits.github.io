@@ -189,6 +189,7 @@ body {
 
 .nav-list {
   list-style: none;
+  display: flex;
   gap: 1rem;
   margin: 0;
   padding: 0;
@@ -355,12 +356,11 @@ body {
   gap: 3rem;
 }
 
-/* UPDATED: Image now comes first (left side) */
+/* Image section - now naturally on the left due to HTML order */
 .hero-image {
   flex: 1;
   text-align: center;
   min-width: 280px;
-  order: 1; /* This puts the image first */
 }
 
 .hero-image img {
@@ -376,11 +376,10 @@ body {
   transform: translateY(-5px);
 }
 
-/* UPDATED: Text now comes second (right side) */
+/* Text section - now naturally on the right due to HTML order */
 .hero-text {
   flex: 1;
   min-width: 300px;
-  order: 2; /* This puts the text second */
 }
 
 .hero-text h2 {
@@ -678,13 +677,7 @@ footer a:hover {
     flex-direction: column;
   }
   
-  /* On mobile, keep image on top for better UX */
-  .hero-image {
-    order: 1;
-  }
-  
   .hero-text {
-    order: 2;
     text-align: center;
   }
   
