@@ -190,7 +190,7 @@ body {
 .nav-list {
   display: flex;
   list-style: none;
-  gap: 0.5rem;
+  gap: 1rem;
   margin: 0;
   padding: 0;
   align-items: center;
@@ -206,12 +206,12 @@ body {
   font-weight: 500;
   color: #444;
   position: relative;
-  padding: 0.75rem 1.25rem;
+  padding: 0.75rem 1rem;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   white-space: nowrap;
   display: block;
-  border-radius: 10px;
+  border-radius: 8px;
   background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(106, 27, 154, 0.1);
@@ -263,7 +263,7 @@ body {
 }
 
 /* ========== Mobile Navigation ========== */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .mobile-menu-toggle {
     display: flex;
   }
@@ -312,7 +312,7 @@ body {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .logo-text {
     font-size: 1.2rem;
   }
@@ -670,6 +670,36 @@ footer a:hover {
 }
 
 /* ========== Responsive Design ========== */
+@media (max-width: 768px) {
+  .hero-text h2 {
+    font-size: 2.2rem;
+  }
+  
+  .hero-banner {
+    padding: 2rem 1rem 3rem;
+  }
+  
+  .benefits h2,
+  .testimonials h2,
+  .blog h2 {
+    font-size: 2rem;
+  }
+  
+  .gallery.row {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .email-form form {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .email-form input[type="email"] {
+    margin-bottom: 1rem;
+  }
+}
+
 @media (max-width: 768px) {
   .hero-text h2 {
     font-size: 2.2rem;
