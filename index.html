@@ -170,25 +170,7 @@
       });
     });
 
-    // Enhanced scroll effect for header
-    let lastScrollY = window.scrollY;
-    
-    window.addEventListener('scroll', () => {
-      const header = document.querySelector('.main-header');
-      const currentScrollY = window.scrollY;
-      
-      if (currentScrollY > 100) {
-        header.style.background = 'linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 244, 255, 0.95) 100%)';
-        header.style.boxShadow = '0 12px 50px rgba(106, 27, 154, 0.12)';
-        header.style.backdropFilter = 'blur(30px)';
-      } else {
-        header.style.background = 'linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 244, 255, 0.9) 100%)';
-        header.style.boxShadow = '0 8px 40px rgba(106, 27, 154, 0.06)';
-        header.style.backdropFilter = 'blur(25px)';
-      }
-      
-      lastScrollY = currentScrollY;
-    });
+
 
     // Blog loading script
     const today = new Date();
