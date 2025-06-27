@@ -632,3 +632,91 @@ figcaption {
 .blog h2 {
   text-align: center;
   color: #4a148c;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+
+#blog-preview {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #f8f8ff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* ========== Footer ========== */
+footer {
+  background: #4a148c;
+  color: white;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+footer a {
+  color: #e1bee7;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* ========== Responsive Design ========== */
+@media (max-width: 768px) {
+  .hero-text h2 {
+    font-size: 2.2rem;
+  }
+  
+  .hero-banner {
+    padding: 2rem 1rem 3rem;
+  }
+  
+  .benefits h2,
+  .testimonials h2,
+  .blog h2 {
+    font-size: 2rem;
+  }
+  
+  .gallery.row {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .email-form form {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .email-form input[type="email"] {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text h2 {
+    font-size: 1.8rem;
+  }
+  
+  .hero-banner {
+    padding: 1.5rem 1rem 2rem;
+  }
+  
+  .benefits,
+  .testimonials,
+  .email-form,
+  .blog {
+    padding: 2rem 1rem;
+  }
+  
+  .testimonial-cards {
+    grid-template-columns: 1fr;
+  }
+}
