@@ -359,11 +359,11 @@ body {
 .hero-image {
   flex: 1;
   text-align: center;
-  min-width: 280px;
+  min-width: 250px;
 }
 
 .hero-image img {
-  max-width: 280px;
+  max-width: 250px;
   width: 100%;
   height: auto;
   border-radius: 12px;
