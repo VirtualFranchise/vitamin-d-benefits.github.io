@@ -31,6 +31,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
@@ -53,12 +54,22 @@ body {
   font-size: 1.5rem;
   font-weight: 700;
   color: #4a148c;
+  white-space: nowrap;
+}
+
+.navigation {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .navigation ul {
   display: flex;
   gap: 2rem;
   list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
 }
 
 .navigation ul li a {
@@ -153,7 +164,7 @@ body {
 }
 
 /* =======================
-   Benefits / About Section
+   Benefits Section
 ======================= */
 .benefits {
   background: #fff;
