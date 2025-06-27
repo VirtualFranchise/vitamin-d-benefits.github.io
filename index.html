@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +11,8 @@
   <meta property="og:description" content="Support bone and immune health with Isotonix Vitamin D with K2. Learn more about its benefits and get yours today." />
   <meta property="og:url" content="https://vitamin-d-benefits.github.io/" />
   <meta property="og:type" content="website" />
-
+  <link rel="icon" href="16-oz8-servings.jpg" type="image/jpeg">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="main-header">
@@ -51,9 +51,7 @@
         <a class="cta-button" href="https://www.isotonix.com/buy/product/isotonix-vitamin-d-with-k2/?id=13085&skuName=single-bottle-90-servings&idType=sku" target="_blank">Shop Now</a>
       </div>
       <div class="hero-image">
-        <div style="width: 320px; height: 320px; background: linear-gradient(135deg, #f3e5f5, #e1bee7); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
-          <div style="font-size: 4rem; color: #6a1b9a;">💊</div>
-        </div>
+        <img src="isotonix-vitamin-d-with-k2.jpg" alt="Isotonix Vitamin D with K2 Bottle">
       </div>
     </div>
   </section>
@@ -62,9 +60,9 @@
     <div class="container">
       <h2>Key Benefits</h2>
       <div class="gallery row">
-        <div style="width: 300px; height: 200px; background: linear-gradient(135deg, #f3e5f5, #e1bee7); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 3rem;">🦴</div>
-        <div style="width: 300px; height: 200px; background: linear-gradient(135deg, #f3e5f5, #e1bee7); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 3rem;">🛡️</div>
-        <div style="width: 300px; height: 200px; background: linear-gradient(135deg, #f3e5f5, #e1bee7); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 3rem;">⚡</div>
+        <img src="2178805__2000x2000__.jpg" alt="Supports bone health" />
+        <img src="4931283__4000x4000__.jpg" alt="Immune support lifestyle" />
+        <img src="6148478__3000x3000__.jpg" alt="Daily supplement routine" />
       </div>
       <ul class="highlight-list">
         <li>✅ Supports calcium absorption for bone health</li>
@@ -75,7 +73,7 @@
         Isotonix Vitamin D with K2 delivers a powerful combination of essential nutrients to support your bone density and immune health. Its advanced isotonic delivery maximizes bioavailability so your body gets the most from every dose.
       </p>
       <figure>
-        <div style="width: 500px; height: 300px; background: linear-gradient(135deg, #f3e5f5, #e1bee7); border-radius: 12px; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 2rem; color: #6a1b9a;">Happy Customer</div>
+        <img class="mid-bottle smaller-couple" src="dan_reaching_layla.png" alt="Man reaching for Isotonix Vitamin D" />
         <figcaption>"Mixes instantly – I felt a difference in my energy within days."</figcaption>
       </figure>
     </div>
@@ -106,4 +104,87 @@
           <span>⭐⭐⭐⭐⭐ - Brian T.</span>
         </div>
         <div class="testimonial-card">
-          <p>"My doctor recommende
+          <p>"My doctor recommended Vitamin D and I'm so glad I chose this one – top-notch quality!"</p>
+          <span>⭐⭐⭐⭐⭐ - Denise W.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="email-form" id="contact">
+    <div class="container">
+      <h2>Get Weekly Wellness Tips</h2>
+      <p>Join 100+ others and receive our free guide: <strong>"7 Days to Stronger Bones & Immunity"</strong></p>
+      <form action="https://formspree.io/f/moqgnjvn" method="POST">
+        <input type="email" name="email" placeholder="Your email address" required />
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="blog">
+    <div class="container">
+      <h2>Weekly Blog Highlights</h2>
+      <div id="blog-preview">
+        <p>Loading weekly blog post...</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Vitamin D Benefits Guide. Not affiliated with Market America. Educational content only.</p>
+      <p><strong>Ready to feel the difference?</strong> <a href="https://www.isotonix.com/buy/product/isotonix-vitamin-d-with-k2/?id=13085&skuName=single-bottle-90-servings&idType=sku" target="_blank">Click here to get Isotonix Vitamin D now</a>.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const mobileToggle = document.querySelector('.mobile-menu-toggle');
+    const navList = document.querySelector('.nav-list');
+    
+    mobileToggle.addEventListener('click', () => {
+      navList.classList.toggle('active');
+      mobileToggle.classList.toggle('active');
+    });
+
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.nav-list a').forEach(link => {
+      link.addEventListener('click', () => {
+        navList.classList.remove('active');
+        mobileToggle.classList.remove('active');
+      });
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Blog loading script
+    const today = new Date();
+    const start = new Date("2025-01-06");
+    const weeksSinceStart = Math.floor((today - start) / (7 * 24 * 60 * 60 * 1000));
+    const blogWeek = (weeksSinceStart % 52) + 1;
+    const blogPath = `blog/week-${blogWeek}.html`;
+
+    fetch(blogPath)
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("blog-preview").innerHTML = html;
+      })
+      .catch(() => {
+        document.getElementById("blog-preview").innerHTML = "<p>Check back soon for our latest post!</p>";
+      });
+  </script>
+</body>
+</html>
