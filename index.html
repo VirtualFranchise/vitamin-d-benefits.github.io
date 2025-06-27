@@ -15,15 +15,25 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="main-header sticky-header">
+  <header class="main-header">
     <div class="nav-container">
       <div class="logo-area">
-        <img src="icon-placeholder.svg" alt="Logo" class="logo-icon">
+        <div class="logo-icon">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="18" cy="18" r="18" fill="#6a1b9a"/>
+            <path d="M18 8v20M8 18h20" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
         <h1 class="logo-text">Isotonix Vitamin D</h1>
       </div>
       <nav class="navigation">
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         <ul class="nav-list">
-          <li><a href="#">Home</a></li>
+          <li><a href="#home">Home</a></li>
           <li><a href="#benefits">Benefits</a></li>
           <li><a href="#testimonials">Testimonials</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -32,7 +42,7 @@
     </div>
   </header>
 
-  <section class="hero-banner">
+  <section class="hero-banner" id="home">
     <div class="hero-content container">
       <div class="hero-text">
         <h2>Powerful Support for Bone & Immune Health</h2>
@@ -63,7 +73,7 @@
       </p>
       <figure>
         <img class="mid-bottle smaller-couple" src="dan_reaching_layla.png" alt="Man reaching for Isotonix Vitamin D" />
-        <figcaption>“Mixes instantly – I felt a difference in my energy within days.”</figcaption>
+        <figcaption>"Mixes instantly – I felt a difference in my energy within days."</figcaption>
       </figure>
     </div>
   </section>
@@ -93,7 +103,7 @@
           <span>⭐⭐⭐⭐⭐ - Brian T.</span>
         </div>
         <div class="testimonial-card">
-          <p>"My doctor recommended Vitamin D and I’m so glad I chose this one – top-notch quality!"</p>
+          <p>"My doctor recommended Vitamin D and I'm so glad I chose this one – top-notch quality!"</p>
           <span>⭐⭐⭐⭐⭐ - Denise W.</span>
         </div>
       </div>
@@ -103,7 +113,7 @@
   <section class="email-form" id="contact">
     <div class="container">
       <h2>Get Weekly Wellness Tips</h2>
-      <p>Join 100+ others and receive our free guide: <strong>“7 Days to Stronger Bones & Immunity”</strong></p>
+      <p>Join 100+ others and receive our free guide: <strong>"7 Days to Stronger Bones & Immunity"</strong></p>
       <form action="https://formspree.io/f/moqgnjvn" method="POST">
         <input type="email" name="email" placeholder="Your email address" required />
         <button type="submit">Subscribe</button>
@@ -128,6 +138,38 @@
   </footer>
 
   <script>
+    // Mobile menu toggle
+    const mobileToggle = document.querySelector('.mobile-menu-toggle');
+    const navList = document.querySelector('.nav-list');
+    
+    mobileToggle.addEventListener('click', () => {
+      navList.classList.toggle('active');
+      mobileToggle.classList.toggle('active');
+    });
+
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.nav-list a').forEach(link => {
+      link.addEventListener('click', () => {
+        navList.classList.remove('active');
+        mobileToggle.classList.remove('active');
+      });
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Blog loading script
     const today = new Date();
     const start = new Date("2025-01-06");
     const weeksSinceStart = Math.floor((today - start) / (7 * 24 * 60 * 60 * 1000));
