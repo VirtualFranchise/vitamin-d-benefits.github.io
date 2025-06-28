@@ -1437,6 +1437,16 @@
         </div>
     </section>
 
+<section id="weekly-blog" class="blog-highlight" style="margin: 3rem 0;">
+  <h2>📅 This Week’s Blog Highlight</h2>
+  <div id="blog-container" style="border: 1px solid #ccc; padding: 1rem; border-radius: 8px; background: #f9f9f9;">
+    <iframe id="blog-frame" width="100%" height="400" style="border: none;"></iframe>
+  </div>
+  <p style="margin-top: 1rem;"><a id="read-full-blog" href="#" target="_blank">Read Full Blog</a></p>
+</section>
+
+    
+
     <!-- Footer -->
 <footer>
     <div class="container" style="text-align: center;">
@@ -1448,6 +1458,17 @@
         </p>
     </div>
 </footer>
+
+    <div style="display: none;">
+  <ul>
+    <!-- Hidden SEO links to all 52 blogs -->
+    <li><a href="blog/week-1.html">Blog Week 1</a></li>
+    <li><a href="blog/week-2.html">Blog Week 2</a></li>
+    ...
+    <li><a href="blog/week-52.html">Blog Week 52</a></li>
+  </ul>
+</div>
+
 
 
     <script>
@@ -1589,5 +1610,78 @@
         - Objection handling built-in
         */
     </script>
+<script>
+  // Load current week's blog
+  function getBlogOfTheWeek() {
+    const now = new Date();
+    const oneJan = new Date(now.getFullYear(), 0, 1);
+    const weekNumber = Math.ceil((((now - oneJan) / 86400000) + oneJan.getDay() + 1) / 7);
+    const blogNumber = ((weekNumber - 1) % 52) + 1;
+    const blogFile = `blog/week-${blogNumber}.html`;
+    
+    document.getElementById("blog-frame").src = blogFile;
+    document.getElementById("read-full-blog").href = blogFile;
+  }
+
+  getBlogOfTheWeek();
+</script>
+<div style="display: none;">
+  <ul>
+    <li><a href="blog/week-1.html">Blog Week 1</a></li>
+    <li><a href="blog/week-2.html">Blog Week 2</a></li>
+    <li><a href="blog/week-3.html">Blog Week 3</a></li>
+    <li><a href="blog/week-4.html">Blog Week 4</a></li>
+    <li><a href="blog/week-5.html">Blog Week 5</a></li>
+    <li><a href="blog/week-6.html">Blog Week 6</a></li>
+    <li><a href="blog/week-7.html">Blog Week 7</a></li>
+    <li><a href="blog/week-8.html">Blog Week 8</a></li>
+    <li><a href="blog/week-9.html">Blog Week 9</a></li>
+    <li><a href="blog/week-10.html">Blog Week 10</a></li>
+    <li><a href="blog/week-11.html">Blog Week 11</a></li>
+    <li><a href="blog/week-12.html">Blog Week 12</a></li>
+    <li><a href="blog/week-13.html">Blog Week 13</a></li>
+    <li><a href="blog/week-14.html">Blog Week 14</a></li>
+    <li><a href="blog/week-15.html">Blog Week 15</a></li>
+    <li><a href="blog/week-16.html">Blog Week 16</a></li>
+    <li><a href="blog/week-17.html">Blog Week 17</a></li>
+    <li><a href="blog/week-18.html">Blog Week 18</a></li>
+    <li><a href="blog/week-19.html">Blog Week 19</a></li>
+    <li><a href="blog/week-20.html">Blog Week 20</a></li>
+    <li><a href="blog/week-21.html">Blog Week 21</a></li>
+    <li><a href="blog/week-22.html">Blog Week 22</a></li>
+    <li><a href="blog/week-23.html">Blog Week 23</a></li>
+    <li><a href="blog/week-24.html">Blog Week 24</a></li>
+    <li><a href="blog/week-25.html">Blog Week 25</a></li>
+    <li><a href="blog/week-26.html">Blog Week 26</a></li>
+    <li><a href="blog/week-27.html">Blog Week 27</a></li>
+    <li><a href="blog/week-28.html">Blog Week 28</a></li>
+    <li><a href="blog/week-29.html">Blog Week 29</a></li>
+    <li><a href="blog/week-30.html">Blog Week 30</a></li>
+    <li><a href="blog/week-31.html">Blog Week 31</a></li>
+    <li><a href="blog/week-32.html">Blog Week 32</a></li>
+    <li><a href="blog/week-33.html">Blog Week 33</a></li>
+    <li><a href="blog/week-34.html">Blog Week 34</a></li>
+    <li><a href="blog/week-35.html">Blog Week 35</a></li>
+    <li><a href="blog/week-36.html">Blog Week 36</a></li>
+    <li><a href="blog/week-37.html">Blog Week 37</a></li>
+    <li><a href="blog/week-38.html">Blog Week 38</a></li>
+    <li><a href="blog/week-39.html">Blog Week 39</a></li>
+    <li><a href="blog/week-40.html">Blog Week 40</a></li>
+    <li><a href="blog/week-41.html">Blog Week 41</a></li>
+    <li><a href="blog/week-42.html">Blog Week 42</a></li>
+    <li><a href="blog/week-43.html">Blog Week 43</a></li>
+    <li><a href="blog/week-44.html">Blog Week 44</a></li>
+    <li><a href="blog/week-45.html">Blog Week 45</a></li>
+    <li><a href="blog/week-46.html">Blog Week 46</a></li>
+    <li><a href="blog/week-47.html">Blog Week 47</a></li>
+    <li><a href="blog/week-48.html">Blog Week 48</a></li>
+    <li><a href="blog/week-49.html">Blog Week 49</a></li>
+    <li><a href="blog/week-50.html">Blog Week 50</a></li>
+    <li><a href="blog/week-51.html">Blog Week 51</a></li>
+    <li><a href="blog/week-52.html">Blog Week 52</a></li>
+  </ul>
+</div>
+  
+    
 </body>
 </html>
